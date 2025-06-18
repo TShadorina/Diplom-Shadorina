@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Реєстрація</title>
+<link href="/css/register.css" rel="stylesheet" />
+</head>
+<body>
+<h1>Реєстрація</h1>
+<form method="post" th:action="@{/register}">
+    <div>
+        <input name="username" placeholder="Юзернейм" required type="text" />
+    </div>
+    <div>
+        <input name="password" placeholder="Пароль" required type="password" />
+    </div>
+    <div>
+        <input name="confirmPassword" placeholder="Повторіть пароль" required type="password" />
+    </div>
+    <button type="submit">Зареєструватись</button>
+    <a href="/login">Увійти</a>
+</form>
+</body>
+</html>
