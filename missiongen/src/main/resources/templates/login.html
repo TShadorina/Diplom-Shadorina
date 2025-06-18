@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk" >
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Логін</title>
+<link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+<h1 >Будь ласка увійдіть</h1>
+    <div class="error" th:if="${param.error}">
+        Невірне ім'я користувача або пароль.</div>
+    <div class="error" th:if="${param.logout}">
+        Ви вийшли.</div>
+    <form action="/login" method="post">
+        <div>
+            <input type="text" name="username" placeholder="Юзернейм"/>
+        </div>
+        <div>
+            <input type="password" name="password" placeholder="Пароль"/>
+        </div>
+        <button type="submit">Увійти</button>
+            <a href="/register">Зареєструватись</a>
+    </form>
+
+
+</body>
+</html>
